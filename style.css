@@ -1,0 +1,25 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    color: darkblue;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

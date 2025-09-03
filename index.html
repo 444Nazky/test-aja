@@ -1,26 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda</title>
-    <favicon href="😀" type="image/">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Website Kelas X RPL</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Ahmad Sumbul Sahroni</h1>
-    <p>assalamualaikum  hi</p>
-    <p>hello world</p>
-       <img src="assets/images/yesking.jpeg" alt="" width="200" height="200 ">
-    <p>charon bobo</p>
-    <h1>mwehehehe</h1>
-    <h1>dwdwdwdwddojqdoqjqoqwfwfwfwfw</h1>
-    <p>assalamualaikum salam sejahtera bagi kita semua om swastiastu</p>
-    <p>Wassup!</p>
-    <p>_______
-       |     |
-       _-----|     |_____
-      |      |     |     |
-    </p>
+  <header>
+    <div class="logo">X RPL</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h1>Selamat Datang di Website Kelas X RPL</h1>
+      <p>Motto: <em>“Bersatu, Berprestasi, dan Selalu Berbahagia.”</em></p>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About Us</h2>
+      <p>Kelas X RPL dikenal kompak dan aktif dalam berbagai kegiatan sekolah baik akademik maupun non-akademik.</p>
+      <ul class="profile">
+        <li><strong>Jumlah Siswa:</strong> 20</li>
+        <li><strong>Ketua Kelas:</strong> Dzaky Nazran</li>
+        <li><strong>Sekretaris:</strong> Abdul Aziz Hammadi</li>
+        <li><strong>Bendahara:</strong> ?</li>
+      </ul>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="" alt="foto1" onclick="openModal(this)">
+        <img src="" alt="foto2" onclick="openModal(this)">
+        <img src="" alt="foto3" onclick="openModal(this)">
+      </div>
+    </section>
+
+    <section id="news" class="card">
+      <h2>News & Activity</h2>
+      <div class="news">
+        <h3>Persiapan Lomba Kebersihan</h3>
+        <time>20 Agustus 2025</time>
+        <p>Semua anggota kelas hadir untuk rapat persiapan lomba kebersihan.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p><strong>Wali Kelas:</strong> Ust Angga (WA: ?)</p>
+      <p><strong>Email:</strong> kelasXrpl@email.com</p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Kelas X RPL | All rights reserved.
+  </footer>
+
+  <!-- Modal Gallery -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openModal(img) {
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("modalImg").src = img.src;
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
